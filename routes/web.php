@@ -1,6 +1,9 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontcontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [Frontcontroller::class, 'index'])->name('index');
+
+Route::get('/login', [Frontcontroller::class, 'login'])->name('login');
+
+ ?>
