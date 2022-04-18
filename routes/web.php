@@ -3,6 +3,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontcontroller;
+use App\Http\Controllers\AdminController;
+
 
 
 /*
@@ -21,5 +23,7 @@ use App\Http\Controllers\Frontcontroller;
 Route::get('/', [Frontcontroller::class, 'index'])->name('index');
 
 Route::get('/login', [Frontcontroller::class, 'login'])->name('login');
+Route::get('/register', [Frontcontroller::class, 'register'])->name('register');
+Route::get('/home', [AdminController::class, 'index'])->name('admin.index');
 
  ?>
